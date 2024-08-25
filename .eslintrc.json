@@ -1,3 +1,9 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "extends": ["plugin:tailwindcss/recommended"],
+  "plugins": ["tailwindcss"],
+  "rules": {
+    "tailwindcss/classnames-order": "error",
+    "tailwindcss/no-unknown-classes": "error"
+  }
 }
