@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 
 const EmployerSignup: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -107,6 +108,18 @@ const EmployerSignup: React.FC = () => {
           >
             Sign Up
           </button>
+          <div className="mt-4 text-gray-700">
+            Already have an account?{' '}
+            <Link href="/signin/employer" className="text-primary hover:underline">
+              Sign In
+            </Link>
+          </div>
+          <div className="mt-2 text-gray-700">
+            Forgot your password?{' '}
+            <Link href="/forgot-password/employer" className="text-primary hover:underline">
+              Reset it here
+            </Link>
+          </div>
         </form>
       </div>
     </section>

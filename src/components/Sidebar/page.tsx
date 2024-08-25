@@ -23,8 +23,8 @@ const sidebarItems = [
     icon: faBriefcase,
     subLinks: [
       { label: 'Hire a Talent', href: '/jobs/hire-a-talent' },
-      { label: 'Search for a Job', href: '/jobs/search' },
-      { label: 'Post a Job', href: '/jobs/post' },
+      { label: 'Search for a Job', href: '/Jobs/search' },
+      { label: 'Post a Job', href: '/Jobs/post' },
     ],
   },
   {
