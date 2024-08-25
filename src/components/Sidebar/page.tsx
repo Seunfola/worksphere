@@ -22,7 +22,7 @@ const sidebarItems = [
     href: '/jobs',
     icon: faBriefcase,
     subLinks: [
-      { label: 'Hire a Talent', href: '/jobs/hire-a-talent' },
+      { label: 'Find a Talent', href: '/Jobs/hire' },
       { label: 'Search for a Job', href: '/Jobs/search' },
       { label: 'Post a Job', href: '/Jobs/post' },
     ],
@@ -38,12 +38,12 @@ const sidebarItems = [
   },
   {
     label: 'Certifications',
-    href: '/certifications',
+    href: '/Jobs/certifications',
     icon: faCertificate,
     subLinks: [
-      { label: 'Coding Test', href: '/certifications/coding' },
-      { label: 'Language Test', href: '/certifications/language' },
-      { label: 'Soft Skill Test', href: '/certifications/soft-skill' },
+      { label: 'Coding Test', href: '/Jobs/certificate/coding' },
+      { label: 'Language Test', href: '/Jobs/certificate/language' },
+      { label: 'Soft Skill Test', href: '/Jobs/certificate/soft-skill' },
     ],
   },
   {

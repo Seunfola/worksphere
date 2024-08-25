@@ -26,7 +26,7 @@ const Footer = () => {
       label: 'Jobs',
       href: '/jobs',
       subLinks: [
-        { label: 'Hire a Talent', href: '/jobs/hire-a-talent' },
+        { label: 'Find a Talent', href: '/jobs/hire-a-talent' },
         { label: 'Search for a Job', href: '/jobs/search' },
         { label: 'Post a Job', href: '/Jobs/post' },
       ],
