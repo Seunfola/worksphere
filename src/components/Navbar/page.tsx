@@ -24,7 +24,7 @@ const Navbar = () => {
       </div>
 
       <div className="flex-grow flex justify-center">
-        <div className="relative">
+        <div className="relative hidden lg:block">
           <input
             type="text"
             className="w-96 p-2 pl-10 pr-4 border border-gray-300 rounded-full focus:outline-none focus:border-purple-500"
@@ -37,11 +37,11 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className="flex items-center">
+      <div className="flex items-center space-x-4">
         <Link href="/notifications" className="relative">
           <FontAwesomeIcon
             icon={faBell}
-            className="text-gray-400 hover:text-gray-600 mr-6"
+            className="text-gray-400 hover:text-gray-600"
           />
           <span className="absolute top-0 right-0 block h-2 w-2 bg-red-500 rounded-full" />
         </Link>
@@ -51,7 +51,7 @@ const Navbar = () => {
             size="2x"
             className="text-gray-400 hover:text-gray-600"
           />
-          <div className="ml-2">
+          <div className="ml-2 hidden sm:block">
             <p className="text-sm font-medium text-gray-700">Talent</p>
           </div>
         </Link>

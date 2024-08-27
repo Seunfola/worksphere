@@ -10,7 +10,6 @@ const Home: React.FC = () => {
   return (
     <div className="bg-gray-50 text-gray-800 min-h-screen">
       <HeroSection />
-      {/* Uncomment the following sections as needed */}
       <FeaturesSection />
       <TestimonialSection />
       <CallToActionSection />

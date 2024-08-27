@@ -4,18 +4,18 @@
 
 :root {
   --foreground-rgb: 42, 61, 69; /* Primary teal-blue */
-  --background-start-rgb: 250, 250, 250; /* Clean, light background */
+  --background-start-rgb: 250, 250, 250; 
   --background-end-rgb: 255, 255, 255; /* White */
   --primary-rgb: 42, 61, 69; /* Primary color for text */
   --secondary-rgb: 138, 147, 154; /* Elegant gray */
-  --accent-rgb: 241, 245, 248; /* Soft, almost white gray */
+  --accent-rgb: 241, 245, 248; 
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 241, 245, 248; /* Light accent for dark mode */
-    --background-start-rgb: 27, 27, 27; /* Dark background start */
-    --background-end-rgb: 44, 44, 44; /* Dark background end */
+    --foreground-rgb: 241, 245, 248; 
+    --background-start-rgb: 27, 27, 27;
+    --background-end-rgb: 44, 44, 44;
   }
 }
 
