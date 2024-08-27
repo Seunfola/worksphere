@@ -48,17 +48,9 @@ const sidebarItems = [
   },
 ];
 
-const TalentProfileSidebar = ({ isOpen, onToggleSidebar }: SidebarProps) => {
+const TalentProfileSidebar: React.FC<SidebarProps> = ({ isOpen, onToggleSidebar }) => {
   const [openSections, setOpenSections] = useState<number[]>([]);
   const sidebarRef = useRef<HTMLDivElement>(null);
-
-  const handleToggleSection = (index: number) => {
-    setOpenSections((prevOpenSections) =>
-      prevOpenSections.includes(index)
-        ? prevOpenSections.filter((i) => i !== index)
-        : [...prevOpenSections, index]
-    );
-  };
 
   const handleClickOutside = (event: MouseEvent) => {
     if (sidebarRef.current && !sidebarRef.current.contains(event.target as Node) && isOpen) {
