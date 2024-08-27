@@ -34,16 +34,32 @@ h1, h2, h3, h4, h5, h6 {
   .text-balance {
     text-wrap: balance;
   }
+
   .btn-primary {
     @apply bg-[rgb(var(--primary-rgb))] text-[rgb(var(--accent-rgb))] px-5 py-4 rounded-lg border border-transparent transition-colors;
   }
+
   .btn-primary:hover {
     @apply bg-[rgb(var(--secondary-rgb))] border-gray-200 dark:bg-[rgb(var(--background-end-rgb))] dark:border-[rgb(var(--background-start-rgb))];
   }
+
   .link-primary {
     @apply text-[rgb(var(--primary-rgb))] underline;
   }
+
   .link-primary:hover {
     @apply no-underline text-[rgb(var(--secondary-rgb))];
+  }
+
+  .bg-secondary {
+    @apply bg-[rgb(var(--secondary-rgb))];
+  }
+
+  .text-accent {
+    @apply text-[rgb(var(--accent-rgb))];
+  }
+
+  .section-full-width {
+    @apply w-full max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8;
   }
 }

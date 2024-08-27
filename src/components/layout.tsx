@@ -40,7 +40,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         } ${isMobile ? 'ml-0' : ''}`}
       >
         <Navbar />
-        <main className="flex-grow  text-accent px-4 md:px-8 lg:px-12">
+        <main className="flex-grow  text-accent ">
           {children}
         </main>
         <Footer />
