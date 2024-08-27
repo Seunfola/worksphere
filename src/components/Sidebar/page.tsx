@@ -4,7 +4,6 @@ import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes, faHome, faBriefcase, faUsers, faCertificate, faCommentDots, faEnvelope, faSignInAlt, faDonate } from '@fortawesome/free-solid-svg-icons';
-import Image from 'next/image';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -112,29 +111,20 @@ const Sidebar = ({ isOpen, onToggleSidebar }: SidebarProps) => {
   return (
     <aside
       ref={sidebarRef}
-      className={`bg-primary h-screen p-5 fixed transition-width duration-300 z-50 ${
+      className={`bg-gray-800 text-white h-screen p-5 fixed transition-width duration-200 z-50 ${
         isOpen ? 'w-60' : 'w-20'
       } flex flex-col overflow-y-auto`}
     >
-      <div className="flex items-center justify-between mb-6">
+      <div className="flex items-center justify-between mt-6 mb-6">
         {isOpen && (
-          <button onClick={onToggleSidebar} className="text-accent absolute top-4 right-4 focus:outline-none">
+          <button onClick={onToggleSidebar} className="text-white absolute top-5 right-5 focus:outline-none">
             <FontAwesomeIcon icon={faTimes} size="lg" />
           </button>
         )}
         {!isOpen && (
-          <button onClick={onToggleSidebar} className="text-accent focus:outline-none">
+          <button onClick={onToggleSidebar} className="text-white focus:outline-none">
             <FontAwesomeIcon icon={faBars} size="lg" />
           </button>
-        )}
-        {isOpen && (
-          <Image
-            src="/WorkSphere.png"
-            alt="WorkSphere"
-            width={90}
-            height={40}
-            className="ml-8 transition-all duration-300 self-center"
-          />
         )}
       </div>
       <nav className="flex-1">
@@ -142,7 +132,7 @@ const Sidebar = ({ isOpen, onToggleSidebar }: SidebarProps) => {
           {sidebarItems.map((item, index) => (
             <li key={index}>
               <div className="flex items-center justify-between">
-                <Link href={item.href} className="text-accent hover:text-primary-light flex items-center">
+                <Link href={item.href} className="text-white hover:text-gray-300 flex items-center pb-3">
                   <FontAwesomeIcon icon={item.icon} size="lg" className="mr-3" />
                   <span className={`transition-opacity duration-300 ${isOpen ? 'opacity-100' : 'opacity-0'}`}>
                     {item.label}
@@ -150,7 +140,7 @@ const Sidebar = ({ isOpen, onToggleSidebar }: SidebarProps) => {
                 </Link>
                 {item.subLinks && isOpen && (
                   <button
-                    className="text-accent hover:text-primary-light ml-2"
+                    className="text-white hover:text-gray-300 ml-2"
                     onClick={() => handleToggleSection(index)}
                   >
                     {openSections.includes(index) ? '▲' : '▼'}
@@ -161,7 +151,7 @@ const Sidebar = ({ isOpen, onToggleSidebar }: SidebarProps) => {
                 <ul className="ml-6 mt-2 space-y-2">
                   {item.subLinks.map((subLink, subIndex) => (
                     <li key={subIndex}>
-                      <Link href={subLink.href} className="text-accent hover:text-primary-light">
+                      <Link href={subLink.href} className="text-white hover:text-gray-300">
                         {subLink.label}
                       </Link>
                     </li>

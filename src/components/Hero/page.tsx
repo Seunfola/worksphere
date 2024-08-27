@@ -10,12 +10,12 @@ const HeroSection: React.FC = () => {
       <p className="text-lg mb-8">Your one-stop platform for job seekers and freelancers.</p>
       <div>
         <Link href="/jobs" legacyBehavior>
-          <a className="bg-primary text-white px-6 py-3 rounded-md hover:bg-primary-dark transition-colors">
+          <a className="bg-ws-muted-gold text-white px-6 py-3 rounded-md hover:bg-gray-200 transition-colors">
             Find a Job
           </a>
         </Link>
         <Link href="/freelancers" legacyBehavior>
-          <a className="bg-secondary text-white px-6 py-3 rounded-md ml-4 hover:bg-secondary-dark transition-colors">
+          <a className="bg-secondary text-white px-6 py-3 rounded-md ml-4 hover:bg-gray-200 transition-colors">
             Hire a Freelancer
           </a>
         </Link>
