@@ -2,11 +2,11 @@ import React from 'react';
 
 interface InfoSectionProps {
   title: string;
-  items: { label: string; value: string }[];
+  items:  { label: string; value: string }[];
   onEditClick?: () => void;
 }
 
-const InfoSection: React.FC<InfoSectionProps> = ({ title, items, onEditClick }) => {
+const InfoSection = ({ title, items, onEditClick }: InfoSectionProps) => {
   return (
     <section className="bg-white p-6 rounded-custom shadow-md">
       <div className="flex justify-between items-center">
