@@ -24,7 +24,7 @@ const Footer = () => {
     },
     {
       label: 'Jobs',
-      href: '/jobs',
+      href: '/Jobs',
       subLinks: [
         { label: 'Find Talent', href: '/jobs/hire-a-talent' },
         { label: 'Search for a Job', href: '/jobs/search' },
@@ -79,30 +79,29 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gradient-to-b from-white to-gray-100 text-grey-700 py-12">
+    <footer className="bg-gradient-to-b from-white to-gray-100 border-t border-gray-700 text-grey-400 py-12">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap justify-between text-center md:text-left mb-8">
           <div className="w-full md:w-1/3 p-4">
             <FontAwesomeIcon icon={faMapMarkerAlt} className="text-orange-500 mr-2" />
             <a
-              href="https://www.google.com/maps?q=1010+Avenue,+SW+54821,+Chandigarh"
+              href="https://www.google.com/maps?q=3382+Fairburn+Road,+SW+Atlanta,+Georgia+30331"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-orange-500"
             >
-              1010 Avenue, SW 54821, Chandigarh
-            </a>
+            Fairburn Road SW, Atlanta, GA,            </a>
           </div>
           <div className="w-full md:w-1/3 p-4">
             <FontAwesomeIcon icon={faPhone} className="text-orange-500 mr-2" />
-            <a href="tel:+9876543210" className="hover:text-orange-500">
-              9876543210
+            <a href="tel:+13397463369" className="hover:text-orange-500">
+               +1(339) 746-3369
             </a>
           </div>
           <div  className="w-full md:w-1/3 p-4">
             <FontAwesomeIcon icon={faEnvelope} className="text-orange-500 mr-2" />
-            <Link href="https://mail.google.com/mail/?view=cm&fs=1&to=mail@workconnect.com" target="_blank" rel="noopener noreferrer" className="hover:text-orange-500">
-    mail@workconnect.com
+            <Link href="https://mail.google.com/mail/?view=cm&fs=1&to=support@workconnect.com" target="_blank" rel="noopener noreferrer" className="hover:text-orange-500">
+    support@workconnect.com
   </Link>
           </div>
         </div>
@@ -136,16 +135,16 @@ const Footer = () => {
               </ul>
               <h5 className="uppercase text-lg font-bold text- mt-4 mb-2">Follow us</h5>
               <div className="flex space-x-4">
-                <a href="#" className="text-gray-400 hover:text-white">
+                <a href="#" className="text-grey-700 hover:text-white">
                   <FontAwesomeIcon icon={faFacebook} size="2x" />
                 </a>
-                <a href="#" className="text-gray-400 hover:text-white">
+                <a href="#" className="text-grey-700 hover:text-white">
                   <FontAwesomeIcon icon={faTwitter} size="2x" />
                 </a>
-                <a href="#" className="text-gray-400 hover:text-white">
+                <a href="#" className="text-grey-700 hover:text-white">
                   <FontAwesomeIcon icon={faInstagram} size="2x" />
                 </a>
-                <a href="#" className="text-gray-400 hover:text-white">
+                <a href="#" className="text-grey-700 hover:text-white">
                   <FontAwesomeIcon icon={faLinkedin} size="2x" />
                 </a>
               </div>
@@ -219,8 +218,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Section with Links */}
-        <div className="mt-8 border-t border-gray-700 pt-4 text-center">
+        <div className="mt-8 border-t border-gray-700 text-center">
           <p className="text-gray-600">&copy; 2024 Workconnect. All Rights Reserved.</p>
           <div className="flex justify-center space-x-4 mt-2">
             <Link href="/" className="text-gray-400 hover:text-white">Home</Link>

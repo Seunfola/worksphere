@@ -6,11 +6,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import 'react-quill/dist/quill.snow.css';
 
-// Dynamically import React Quill with loading spinner
 const ReactQuill = dynamic(() => import('react-quill'), {
   ssr: false,
   loading: () => (
-    <div className="flex justify-center items-center">
+    <div className="flex justify-center items-center h-32">
       <FontAwesomeIcon icon={faSpinner} spin size="2x" className="text-primary" />
     </div>
   ),
@@ -47,15 +46,14 @@ const PostJob: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission logic
     console.log('Job posted:', formData);
   };
 
   return (
-    <section className="py-16 bg-gray-100">
-      <div className="container mx-auto text-center">
-        <h2 className="text-3xl font-semibold text-primary mb-8">Post a Job</h2>
-        <form onSubmit={handleSubmit} className="max-w-2xl mx-auto p-6 bg-white shadow-md rounded-lg">
+    <section className="py-12 sm:py-16 bg-gray-100">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 className="text-2xl sm:text-3xl font-semibold text-primary mb-6 sm:mb-8">Post a Job</h2>
+        <form onSubmit={handleSubmit} className="w-full max-w-lg mx-auto p-4 sm:p-6 bg-white shadow-md rounded-lg">
           <div className="mb-4">
             <label htmlFor="jobTitle" className="block text-left text-gray-800 mb-2">
               Job Title
@@ -66,7 +64,7 @@ const PostJob: React.FC = () => {
               name="jobTitle"
               value={formData.jobTitle}
               onChange={handleChange}
-              className="w-full p-3 text-gray-800 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+              className="w-full p-2 sm:p-3 text-gray-800 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
               required
             />
           </div>
@@ -81,7 +79,7 @@ const PostJob: React.FC = () => {
               name="company"
               value={formData.company}
               onChange={handleChange}
-              className="w-full p-3 text-gray-800 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+              className="w-full p-2 sm:p-3 text-gray-800 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
               required
             />
           </div>
@@ -96,7 +94,7 @@ const PostJob: React.FC = () => {
               name="location"
               value={formData.location}
               onChange={handleChange}
-              className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+              className="w-full p-2 sm:p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
               required
             />
           </div>
@@ -147,7 +145,7 @@ const PostJob: React.FC = () => {
             <ReactQuill
               value={formData.description}
               onChange={handleDescriptionChange}
-              className="text-gray-800 "
+              className="text-gray-800"
               theme="snow"
             />
           </div>
@@ -162,7 +160,7 @@ const PostJob: React.FC = () => {
               name="salaryRange"
               value={formData.salaryRange}
               onChange={handleChange}
-              className="w-full p-3 border rounded-md text-gray-800 focus:outline-none focus:ring-2 focus:ring-primary"
+              className="w-full p-2 sm:p-3 border rounded-md text-gray-800 focus:outline-none focus:ring-2 focus:ring-primary"
               placeholder="e.g., $50,000 - $70,000"
             />
           </div>
@@ -177,7 +175,7 @@ const PostJob: React.FC = () => {
               name="requiredSkills"
               value={formData.requiredSkills}
               onChange={handleChange}
-              className="w-full p-3 border text-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+              className="w-full p-2 sm:p-3 border text-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
               placeholder="e.g., JavaScript, React, Node.js"
             />
           </div>
@@ -192,7 +190,7 @@ const PostJob: React.FC = () => {
               name="applicationDeadline"
               value={formData.applicationDeadline}
               onChange={handleChange}
-              className="w-full p-3 text-gray-800 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+              className="w-full p-2 sm:p-3 text-gray-800 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
             />
           </div>
 
@@ -206,7 +204,7 @@ const PostJob: React.FC = () => {
               name="contactEmail"
               value={formData.contactEmail}
               onChange={handleChange}
-              className="w-full p-3 text-gray-800 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+              className="w-full p-2 sm:p-3 text-gray-800 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
               required
             />
           </div>

@@ -64,24 +64,24 @@ const FAQ: React.FC = () => {
   };
 
   return (
-    <div className="bg-white text-gray-700 p-12">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">Frequently Asked Questions</h1>
+    <div className="bg-white text-gray-700 py-8 sm:py-12">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 sm:mb-8">Frequently Asked Questions</h1>
         {faqData.map((item, i) => (
-          <div key={i} className="mb-8">
-            <h2 className="text-2xl font-semibold border-b-2 border-gray-300 pb-2 mb-4">{item.category}</h2>
+          <div key={i} className="mb-6 sm:mb-8">
+            <h2 className="text-xl sm:text-2xl font-semibold border-b-2 border-gray-300 pb-2 mb-4">{item.category}</h2>
             <ul className="space-y-4">
               {item.questions.map((faq, index) => (
                 <li key={index} className="border-b border-gray-300 pb-2">
                   <button
                     className="w-full text-left flex justify-between items-center focus:outline-none"
-                    onClick={() => toggleAnswer(index)}
+                    onClick={() => toggleAnswer(i * 100 + index)}
                   >
-                    <span>{faq.question}</span>
-                    <span>{openIndex === index ? '-' : '+'}</span>
+                    <span className="text-sm sm:text-base">{faq.question}</span>
+                    <span className="text-sm sm:text-base">{openIndex === i * 100 + index ? '-' : '+'}</span>
                   </button>
-                  {openIndex === index && (
-                    <p className="mt-2 text-sm text-gray-600">{faq.answer}</p>
+                  {openIndex === i * 100 + index && (
+                    <p className="mt-2 text-sm sm:text-base text-gray-600">{faq.answer}</p>
                   )}
                 </li>
               ))}

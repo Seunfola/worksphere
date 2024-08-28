@@ -22,10 +22,10 @@ const ContactUs: React.FC = () => {
   };
 
   return (
-    <section className="py-16 bg-gray-100">
-      <div className="container mx-auto text-center">
-        <h2 className="text-3xl font-semibold text-primary mb-8">Contact Us</h2>
-        <form onSubmit={handleSubmit} className="max-w-xl mx-auto p-6 bg-white shadow-md rounded-lg">
+    <section className="py-12 sm:py-16 bg-gray-100">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 className="text-2xl sm:text-3xl font-semibold text-primary mb-6 sm:mb-8">Contact Us</h2>
+        <form onSubmit={handleSubmit} className="w-full max-w-lg mx-auto p-4 sm:p-6 bg-white shadow-md rounded-lg">
           <div className="mb-4">
             <label htmlFor="name" className="block text-left text-gray-700 mb-2">
               Name
@@ -36,7 +36,7 @@ const ContactUs: React.FC = () => {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+              className="w-full p-2 sm:p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
               required
             />
           </div>
@@ -50,7 +50,7 @@ const ContactUs: React.FC = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+              className="w-full p-2 sm:p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
               required
             />
           </div>
@@ -63,14 +63,14 @@ const ContactUs: React.FC = () => {
               name="message"
               value={formData.message}
               onChange={handleChange}
-              className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+              className="w-full p-2 sm:p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
               rows={5}
               required
             ></textarea>
           </div>
           <button
             type="submit"
-            className="w-full bg-primary text-white p-3 rounded-md hover:bg-primary-dark transition-colors"
+            className="w-full bg-primary text-white p-2 sm:p-3 rounded-md hover:bg-primary-dark transition-colors"
           >
             Send Message
           </button>

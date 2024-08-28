@@ -45,19 +45,20 @@ const PrivacyPolicy: React.FC = () => {
             </p>
             <ul className="list-none mb-4">
               <li>Email: <a href="mailto:support@workconnect.com" className="text-orange-500 hover:underline">support@workconnect.com</a></li>
-              <li>Phone:<a href="tel:+9876543210" className="text-orange-500 hover:underline">+123-456-789</a></li>
+              <li>Phone:<a href="tel:+1 (339) 746-3369" className="text-orange-500 hover:underline">+13397463369</a></li>
             </ul>
             <p className="mb-4">
               For more information, please refer to our <Link href="/Terms" className="text-orange-500 hover:underline">Terms of Use</Link> and <Link href="/FAQ" className="text-orange-500 hover:underline">FAQ</Link>.
             </p>
           </div>
-          <div className="w-1/3 pl-8 mt-4">
-             <img
-            src="/WorkSphere.png" 
-            alt="Privacy Policy" 
-            className="w-full mt-12"
+        <div className="w-1/3 pl-8 mt-4 mx-auto">
+          <img
+           src="/images/privacy.png" 
+           alt="Privacy Policy" 
+           className="w-full rounded-lg"
           />
-          </div>
+        </div>
+
         </div>
       </div>
     </div>

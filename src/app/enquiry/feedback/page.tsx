@@ -38,15 +38,14 @@ const Feedback: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission logic (e.g., send the data to a server)
     console.log('Form submitted:', formData);
   };
 
   return (
-    <section className="py-16 bg-gray-100">
-      <div className="container mx-auto text-center">
-        <h2 className="text-3xl font-semibold text-primary mb-8">Leave Your Feedback</h2>
-        <form onSubmit={handleSubmit} className="max-w-xl mx-auto p-6 bg-white shadow-md rounded-lg">
+    <section className="py-12 sm:py-16 bg-gray-100">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 className="text-2xl sm:text-3xl font-semibold text-primary mb-6 sm:mb-8">Leave Your Feedback</h2>
+        <form onSubmit={handleSubmit} className="w-full max-w-lg mx-auto p-4 sm:p-6 bg-white shadow-md rounded-lg">
           <div className="mb-4">
             <label htmlFor="name" className="block text-left text-gray-700 mb-2">
               Name
@@ -57,7 +56,7 @@ const Feedback: React.FC = () => {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+              className="w-full p-2 sm:p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
               required
             />
           </div>
@@ -71,7 +70,7 @@ const Feedback: React.FC = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+              className="w-full p-2 sm:p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
               required
             />
           </div>
@@ -84,7 +83,7 @@ const Feedback: React.FC = () => {
               name="message"
               value={formData.message}
               onChange={handleChange}
-              className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+              className="w-full p-2 sm:p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
               rows={5}
               required
             ></textarea>
@@ -96,7 +95,7 @@ const Feedback: React.FC = () => {
                 <button
                   key={star}
                   type="button"
-                  className={`text-3xl ${formData.rating >= star ? 'text-yellow-500' : 'text-gray-400'}`}
+                  className={`text-2xl sm:text-3xl ${formData.rating >= star ? 'text-yellow-500' : 'text-gray-400'}`}
                   onClick={() => handleRatingChange(star)}
                 >
                   <FontAwesomeIcon icon={faStar} />
@@ -114,21 +113,21 @@ const Feedback: React.FC = () => {
               name="image"
               accept="image/*"
               onChange={handleImageChange}
-              className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+              className="w-full p-2 sm:p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
             />
             {formData.image && (
               <div className="mt-4">
                 <img
                   src={URL.createObjectURL(formData.image)}
                   alt="Selected"
-                  className="max-h-48 mx-auto rounded-lg"
+                  className="max-h-40 sm:max-h-48 mx-auto rounded-lg"
                 />
               </div>
             )}
           </div>
           <button
             type="submit"
-            className="w-full bg-primary text-white p-3 rounded-md hover:bg-primary-dark transition-colors"
+            className="w-full bg-primary text-white p-2 sm:p-3 rounded-md hover:bg-primary-dark transition-colors"
           >
             Submit Feedback
           </button>
