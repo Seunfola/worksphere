@@ -5,11 +5,11 @@ import Sidebar from './Sidebar/page';
 import Footer from './Footer/page';
 import Navbar from './Navbar/page';
 
-interface LayoutProps {
+interface MainLayoutProps {
   children: React.ReactNode;
 }
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -49,4 +49,4 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   );
 };
 
-export default Layout;
+export default MainLayout;

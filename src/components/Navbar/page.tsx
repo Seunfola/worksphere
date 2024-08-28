@@ -45,7 +45,7 @@ const Navbar = () => {
           />
           <span className="absolute top-0 right-0 block h-2 w-2 bg-red-500 rounded-full" />
         </Link>
-        <Link href="/profile" className="flex items-center">
+        <Link href="/profile/employerProfile" className="flex items-center">
           <FontAwesomeIcon
             icon={faUserCircle}
             size="2x"

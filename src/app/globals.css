@@ -3,31 +3,31 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 42, 61, 69; /* Primary teal-blue */
-  --background-start-rgb: 250, 250, 250; 
-  --background-end-rgb: 255, 255, 255; /* White */
-  --primary-rgb: 42, 61, 69; /* Primary color for text */
-  --secondary-rgb: 138, 147, 154; /* Elegant gray */
-  --accent-rgb: 241, 245, 248; 
+  --foreground-rgb: 55, 65, 81; /* Gray-700 for text */
+  --background-start-rgb: 255, 255, 255; /* White background */
+  --background-end-rgb: 255, 255, 255; /* White background */
+  --primary-rgb: 55, 65, 81; /* Primary color for text, Gray-700 */
+  --secondary-rgb: 107, 114, 128; /* Gray-500 for secondary text */
+  --accent-rgb: 229, 231, 235; /* Gray-200 for accents */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 241, 245, 248; 
-    --background-start-rgb: 27, 27, 27;
-    --background-end-rgb: 44, 44, 44;
+    --foreground-rgb: 229, 231, 235; 
+    --background-start-rgb: 31, 41, 55; 
+    --background-end-rgb: 17, 24, 39; 
   }
 }
 
 body {
   font-family: 'Inter', Arial, sans-serif;
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  color: rgb(var(--foreground-rgb)); 
+  background: rgb(var(--background-start-rgb)); 
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', sans-serif;
-  color: rgb(var(--primary-rgb));
+  color: rgb(var(--primary-rgb)); 
 }
 
 .utilities {
@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .btn-primary {
-    @apply bg-[rgb(var(--primary-rgb))] text-[rgb(var(--accent-rgb))] px-5 py-4 rounded-lg border border-transparent transition-colors;
+    @apply bg-[rgb(var(--primary-rgb))] text-white px-5 py-4 rounded-lg border border-transparent transition-colors;
   }
 
   .btn-primary:hover {
