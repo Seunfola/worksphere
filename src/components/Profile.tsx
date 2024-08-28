@@ -1,28 +1,9 @@
 import React from 'react';
+import { profileCardData } from '@/data/profileData';
 
-interface ProfileCardProps {
-  name: string;
-  email: string;
-  phone: string;
-  profileImageUrl: string;
-  location: string;
-  bio: string;
-  onEditClick: () => void;
-  onSaveLocation: (location: string) => void;
-  onSaveBio: (bio: string) => void;
-}
-
-const ProfileCard: React.FC<ProfileCardProps> = ({
-  name,
-  email,
-  phone,
-  profileImageUrl,
-  location,
-  bio,
-  onEditClick,
-  onSaveLocation,
-  onSaveBio,
-}) => {
+const ProfileCard: React.FC = () => {
+  const { name, email, phone, profileImageUrl, location, bio, onEditClick, onSaveLocation, onSaveBio } = profileCardData;
+  
   const [editLocation, setEditLocation] = React.useState(location);
   const [editBio, setEditBio] = React.useState(bio);
 

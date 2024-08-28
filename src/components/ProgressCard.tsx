@@ -1,14 +1,9 @@
 import React from 'react';
+import { progressCardData } from '@/data/progressCardData';
 
-interface ProgressCardProps {
-  completionPercentage: number;
-  steps: string[];
-}
+const ProgressCard: React.FC = () => {
+  const { completionPercentage, steps } = progressCardData;
 
-const ProgressCard: React.FC<ProgressCardProps> = ({
-  completionPercentage,
-  steps,
-}) => {
   return (
     <section className="bg-white p-6 rounded-custom shadow-md flex flex-col items-center">
       <div className="relative w-24 h-24">

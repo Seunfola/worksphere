@@ -3,7 +3,7 @@
   "extends": ["plugin:tailwindcss/recommended"],
   "plugins": ["tailwindcss"],
   "rules": {
-    // "tailwindcss/classnames-order": "error",
-    // "tailwindcss/no-unknown-classes": "error"
+    "react/no-unescaped-entities": "off",
+    "@next/next/no-page-custom-font": "off"
   }
 }
