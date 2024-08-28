@@ -5,15 +5,13 @@ interface ProgressCardProps {
   steps: string[];
 }
 
-const ProgressCard = ({
+const ProgressCard: React.FC<ProgressCardProps> = ({
   completionPercentage,
   steps,
-}:ProgressCardProps) => {
+}) => {
   return (
     <section className="bg-white p-6 rounded-custom shadow-md flex flex-col items-center">
-      <p className="mb-2 text-gray-500 space-y-1">Complete your profile</p>
       <div className="relative w-24 h-24">
-        
         <svg className="w-full h-full" viewBox="0 0 36 36">
           <path
             className="circle-bg"
@@ -40,9 +38,9 @@ const ProgressCard = ({
         </span>
       </div>
       <div className="mt-4 text-center">
-        
+        <p>Complete your profile</p>
         <ul className="mt-2 text-gray-500 space-y-1">
-          {steps.map((step:string, index: number) => (
+          {steps.map((step, index) => (
             <li key={index}>✔️ {step}</li>
           ))}
         </ul>

@@ -12,7 +12,7 @@ interface ProfileCardProps {
   onSaveBio: (bio: string) => void;
 }
 
-const ProfileCard = ({
+const ProfileCard: React.FC<ProfileCardProps> = ({
   name,
   email,
   phone,
@@ -22,7 +22,7 @@ const ProfileCard = ({
   onEditClick,
   onSaveLocation,
   onSaveBio,
-}: ProfileCardProps ) => {
+}) => {
   const [editLocation, setEditLocation] = React.useState(location);
   const [editBio, setEditBio] = React.useState(bio);
 
@@ -30,7 +30,7 @@ const ProfileCard = ({
     <section className="bg-white p-6 rounded-custom shadow-md flex flex-col gap-4">
       <div className="flex items-center gap-4">
         <img
-          src={profileImageUrl.toString()}
+          src={profileImageUrl}
           alt="Profile"
           className="w-24 h-24 rounded-full"
         />

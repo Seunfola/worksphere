@@ -6,7 +6,7 @@ interface InfoSectionProps {
   onEditClick?: () => void;
 }
 
-const InfoSection = ({ title, items, onEditClick }: InfoSectionProps) => {
+const InfoSection: React.ComponentProps<InfoSectionProps> = ({ title, items, onEditClick }) => {
   return (
     <section className="bg-white p-6 rounded-custom shadow-md">
       <div className="flex justify-between items-center">
