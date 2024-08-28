@@ -23,10 +23,10 @@ const TalentSignin: React.FC = () => {
   };
 
   return (
-    <section className="py-16 bg-gray-100">
-      <div className="container mx-auto text-center">
-        <h2 className="text-3xl font-semibold text-primary mb-8">Talent Sign In</h2>
-        <form onSubmit={handleSubmit} className="max-w-xl mx-auto p-6 bg-white shadow-md rounded-lg">
+    <section className="py-12 sm:py-16 bg-gray-100 flex items-center justify-center">
+      <div className="w-full max-w-md mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-2xl sm:text-3xl font-semibold text-primary mb-6 text-center">Talent Sign In</h2>
+        <form onSubmit={handleSubmit} className="bg-white shadow-md rounded-lg p-6 sm:p-8">
           <div className="mb-4">
             <label htmlFor="email" className="block text-left text-gray-700 mb-2">
               Email
@@ -57,17 +57,17 @@ const TalentSignin: React.FC = () => {
           </div>
           <button
             type="submit"
-            className="w-full bg-primary text-white p-3 rounded-md hover:bg-primary-dark transition-colors"
+            className="w-full bg-primary text-white py-2 rounded-md hover:bg-primary-dark transition-colors"
           >
             Sign In
           </button>
-          <div className="mt-4 text-gray-700">
+          <div className="mt-4 text-center text-gray-700">
             Don't have an account?{' '}
             <Link href="/signup/talent" className="text-primary hover:underline">
               Sign Up
             </Link>
           </div>
-          <div className="mt-2 text-gray-700">
+          <div className="mt-2 text-center text-gray-700">
             Forgot your password?{' '}
             <Link href="/forgot-password/talent" className="text-primary hover:underline">
               Reset it here
